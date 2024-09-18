@@ -34,7 +34,7 @@ function Form() {
             name="name"
             id="name"
             placeholder='Enter your name'
-            className='w-full outline-none border-gray-900 py-2 bg-[#383838] rounded' 
+            className='w-full outline-none border-gray-900 p-2 bg-[#f2f2f2] dark:bg-[#383838] rounded' 
             required />
         </div>
         <div className='flex flex-col gap-1'>
@@ -43,7 +43,7 @@ function Form() {
           name="phone" 
           id="phone" 
           placeholder='Enter your phone number ' 
-          className='w-full outline-none border-gray-900 py-2 bg-[#383838] rounded'
+          className='w-full outline-none border-gray-900 p-2 dark:bg-[#383838] rounded bg-[#f2f2f2]'
           required />
         </div>
         <div className='flex flex-col gap-1'>
@@ -51,7 +51,7 @@ function Form() {
           <textarea name="message" 
           rows="6" 
           placeholder='Enter your message' 
-          className='bg-[#383838] rounded py-2'
+          className='dark:bg-[#383838] rounded p-2 bg-[#f2f2f2]'
           required>
           </textarea>
         </div>

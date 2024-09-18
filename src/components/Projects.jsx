@@ -4,7 +4,7 @@ import ProjectCard from '../ProjectCard';
 
 const Projects = () => {
   return (
-    <div className='w-full flex flex-col my-10 gap-16' id='projects'>
+    <div className='w-full flex flex-col my-10 gap-16 text-black dark:text-white' id='projects'>
       <div>
         <h1 className='text-4xl md:text-6xl font-bold'>
           pro<span className='text-[#01a2e6] underline'>J</span>ects

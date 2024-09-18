@@ -49,7 +49,7 @@ const Services = () => {
   }
 
   return (
-    <div className="w-full py-36" id="services">
+    <div className="w-full text-black dark:text-white py-36" id="services">
       <h1 className="text-4xl md:text-6xl font-bold mb-10">
         ser<span className="text-[#01a2e6] underline">V</span>ices
       </h1>

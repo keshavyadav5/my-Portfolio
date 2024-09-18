@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '../components/ui/button';
 import myImage from '../assets/keshav.png';
+import whiteImage from '../assets/keshavWhite.png';
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa6";
 import { Link, useNavigate } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import myCv from '../assets/KeshavYadav.pdf';
 
-const Home = () => {
+const Home = ({ theme }) => {
+  
   const [displayText, setDisplayText] = useState('');
   const [index, setIndex] = useState(0);
   const [currentRole, setCurrentRole] = useState(0);
   const [typing, setTyping] = useState(true);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const roles = ["FrontEnd Developer", "BackEnd Developer", "FullStack Developer"];
   const speed = 100;
@@ -53,7 +55,7 @@ const Home = () => {
   }, [roles.length, typing]);
 
   return (
-    <div className='w-full min-h-[100vh] flex flex-col items-center justify-center md:flex-row ' id='home'>
+    <div className='w-full min-h-[100vh] flex flex-col items-center text-black dark:text-white justify-center md:flex-row ' id='home'>
       <div className="md:w-[60%] z-40 relative flex flex-col justify-center">
         <div className='flex flex-col gap-5'>
           <h1 className='text-3xl md:text-4xl font-bold'>Hi, I'm Keshav Kumar Yadav</h1>
@@ -83,13 +85,14 @@ const Home = () => {
         </div>
       </div>
       <div className="md:w-[40%] w-full hidden md:block">
-        <img src={myImage} alt="Keshav Kumar Yadav"
+        <img
+          src={theme === "dark" ? myImage : whiteImage}
+          alt="Keshav Kumar Yadav"
           className='bg-opacity-0 absolute md:relative z-30 h-1/3 rounded-b-full w-full md:scale-150 lg:scale-125'
         />
       </div>
     </div>
-
   );
-}
+};
 
 export default Home;

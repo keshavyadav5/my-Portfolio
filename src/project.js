@@ -14,7 +14,7 @@ export const projectJson = [
     "name": "Basketball Academy",
     "image": basketball,
     "description": "It is fully responsive clone of basketball Academy",
-    "url": "https://github.com/keshavyadav5/Basketball-React"
+    "url": "https://basektballacademy.netlify.app/"
   },
   {
     "id" : 897,
@@ -28,41 +28,41 @@ export const projectJson = [
     "name": "Hotel Booking",
     "image": hotel,
     "description": "Clone of hotel booking with different features and fully responsive",
-    "url": "https://github.com/keshavyadav5/Hotel-booking-React-frontEnd"
+    "url": "https://hotelbookingreactfrontend.netlify.app/"
   },
   {
     "id" : 892,
     "name": "Pixel App",
     "image": pixel,
     "description": "It is react.js project of handling api.",
-    "url": "https://github.com/keshavyadav5/Pixel-App"
+    "url": "https://keshavpixelapp.netlify.app"
   },
   {
     "id" : 893,
     "name": "Movie App",
     "image": movie,
     "description": "Here different api is handle of movie and it also mobile responsive app.",
-    "url": "https://github.com/keshavyadav5/movie-react"
+    "url": "https://keshavmovie.netlify.app/"
   },
   {
     "id" : 894,
     "name": "Note App",
     "image": note,
     "description": "It is MERN project with user authentication and with react-redux toolkit.",
-    "url": "https://github.com/keshavyadav5/Note-app"
+    "url": "https://note-app-frontend-seven.vercel.app/"
   },
   {
     "id" : 895,
     "name": "University App",
     "image": university,
     "description": "It is simple clone of university.",
-    "url": "https://github.com/keshavyadav5/University-React"
+    "url": "https://universityreactclone.netlify.app/"
   },
   {
     "id" : 896,
     "name": "Weather App",
     "image": weather,
     "description": "Here weather api is handled to get current temperature and humidity.",
-    "url": "https://github.com/keshavyadav5/Weather-App"
+    "url": "https://keshavweatherapp.netlify.app"
   }
 ]

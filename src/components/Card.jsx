@@ -11,13 +11,13 @@ const Card = ({ service }) => {
   };
 
   return (
-    <div className="flex-grow bg-[#313743] p-8 rounded-lg shadow-2xl items-center gap-5 flex flex-col relative z-30 min-h-[400px] flex-1">
+    <div className="flex-grow dark:bg-[#313743] p-8 rounded-lg shadow-2xl items-center gap-5 flex flex-col relative z-30 min-h-[400px] flex-1 ark:rounded-lg">
       <div className="w-20 h-20 overflow-hidden rounded-full">
         <img src={service.image} alt="Web Development" className="object-cover w-full h-full" />
       </div>
       <div className="text-center bg-transparent flex-1">
         <h2 className="text-2xl bg-transparent font-bold text-white mb-2">{service.name}</h2>
-        <p className="text-sm bg-transparent text-gray-300 mb-4">
+        <p className="text-sm bg-transparent dark:text-gray-300 mb-4">
           {service.description}
         </p>
         <Button variant="blue" className="btn px-4 py-2 rounded-md" onClick={handleChange}>
@@ -25,7 +25,7 @@ const Card = ({ service }) => {
         </Button>
       </div>
       {show && (
-        <div className="absolute flex-1 z-50 top-0 left-0 w-full h-full bg-[#071d28] p-4 py-6 flex flex-col justify-between">
+        <div className="absolute flex-1 z-50 top-0 left-0 w-full h-full bg-[#f8f9fa] text-black dark:text-white  dark:bg-[#071d28] p-4 py-6 flex flex-col justify-between">
           <div className="bg-transparent flex items-center justify-between text-2xl font-bold">
             <h1 className="bg-transparent">{service.name}</h1>
             <div className="cursor-pointer hover:scale-110 hover:text-red-50" onClick={handleChange}>

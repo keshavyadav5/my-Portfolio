@@ -6,13 +6,13 @@ import Form from './Form';
 
 const Contact = () => {
   return (
-    <div className='w-full py-20 flex flex-col' id='contact'>
+    <div className='w-full text-black dark:text-white py-20 flex flex-col' id='contact'>
       <div className='my-10'>
         <h1 className='text-4xl md:text-6xl font-bold'>
           con<span className='text-[#01a2e6] underline'>T</span>act
         </h1>
       </div>
-      <div className='flex gap-10 md:gap-3 flex-col md:flex-row items-center justify-center shadow-2xl py-5'>
+      <div className='flex gap-10 md:gap-3 flex-col md:flex-row p-2 dark:p-0 items-center justify-center shadow-2xl py-5'>
         <div className='flex-1 flex flex-col gap-3'>
           <h2 className='text-2xl font-bold font-serif'>Send Us Message</h2>
           <p className='font-serif text-md'>
