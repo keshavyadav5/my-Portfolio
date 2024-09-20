@@ -5,7 +5,7 @@ import whiteImage from '../assets/keshavWhite.png';
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa6";
 import { Link, useNavigate } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
-import myCv from '../assets/KeshavYadav.pdf';
+import myCv from '../assets/keshavKumarYadav.pdf';
 
 const Home = ({ theme }) => {
   
@@ -79,9 +79,9 @@ const Home = ({ theme }) => {
           </div>
         </div>
         <div className='w-full h-20 text-3xl mt-5 text-[#01a2e6] items-center flex gap-5'>
-          <Link to='https://www.instagram.com/k_shav09/' target='__blank'> <FaInstagram className='hover:text-white transition-all duration-300 scale-105' /></Link>
-          <Link to='https://github.com/keshavyadav5' target='__blank'><FaGithub className='hover:text-white transition-all duration-300 scale-105' /></Link>
-          <Link to='https://www.linkedin.com/in/keshavyadav5/' target='__blank'><FaLinkedin className='hover:text-white transition-all duration-300 scale-105' /></Link>
+          <Link to='https://www.instagram.com/k_shav09/' target='__blank'> <FaInstagram className='hover:text-[#081b29] dark:hover:text-white transition-all duration-300 scale-105' /></Link>
+          <Link to='https://github.com/keshavyadav5' target='__blank'><FaGithub className='hover:text-[#081b29] dark:hover:text-white transition-all duration-300 scale-105' /></Link>
+          <Link to='https://www.linkedin.com/in/keshavyadav5/' target='__blank'><FaLinkedin className='dark:hover:text-white hover:text-[#081b29] transition-all duration-300 scale-105' /></Link>
         </div>
       </div>
       <div className="md:w-[40%] w-full hidden md:block">

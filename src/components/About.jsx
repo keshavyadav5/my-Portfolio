@@ -3,7 +3,7 @@ import { Button } from './ui/button';
 import ProgreshBar from './ProgreshBar';
 import { FaHtml5, FaCss3, FaJs } from "react-icons/fa6";
 import { FaReact, FaNode } from "react-icons/fa";
-import myCv from '../assets/KeshavYadav.pdf';
+import myCv from '../assets/keshavKumarYadav.pdf';
 
 const About = () => {
   return (
