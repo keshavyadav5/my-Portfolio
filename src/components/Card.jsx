@@ -34,7 +34,7 @@ const Card = ({ service }) => {
           </div>
           <div className='bg-transparent'>
             <div className='text-xl py-2 font-bold flex text-[#01a2e6]'>
-              Project Name: <p className='text-white px-2 font-normal'>{service.project.name}</p>
+              Project Name: <p className='dark:text-white text-black px-2 font-normal'>{service.project.name}</p>
             </div>
             <p className='text-sm mb-2 font-serif'>
               {service.project.describtion}
