@@ -27,32 +27,33 @@ function Form() {
   };
   return (
     <>
-      <form onSubmit={onSubmit} className='flex flex-col gap-2 w-full'>
+      <form onSubmit={onSubmit} className='flex flex-col gap-2'>
         <div className='flex flex-col gap-1'>
           <label htmlFor="name">Your name</label>
-          <input type="text"
+          <input
+            type="text"
             name="name"
             id="name"
-            placeholder='Enter your name'
-            className='w-full outline-none border-gray-900 p-2 bg-[#f2f2f2] dark:bg-[#383838] rounded' 
+            placeholder="Enter your name"
+            className='w-full outline-none border-gray-900 p-2 dark:bg-[#383838] rounded bg-[#f2f2f2]'
             required />
         </div>
         <div className='flex flex-col gap-1'>
           <label htmlFor="phone">Phone number</label>
-          <input type="tel" 
-          name="phone" 
-          id="phone" 
-          placeholder='Enter your phone number ' 
-          className='w-full outline-none border-gray-900 p-2 dark:bg-[#383838] rounded bg-[#f2f2f2]'
-          required />
+          <input type="tel"
+            name="phone"
+            id="phone"
+            placeholder='Enter your phone number '
+            className='w-full outline-none border-gray-900 p-2 dark:bg-[#383838] rounded bg-[#f2f2f2]'
+            required />
         </div>
         <div className='flex flex-col gap-1'>
           <label>Write your message here</label>
-          <textarea name="message" 
-          rows="6" 
-          placeholder='Enter your message' 
-          className='dark:bg-[#383838] rounded p-2 bg-[#f2f2f2]'
-          required>
+          <textarea name="message"
+            rows="6"
+            placeholder='Enter your message'
+            className='dark:bg-[#383838] rounded p-2 bg-[#f2f2f2]'
+            required>
           </textarea>
         </div>
         <button type='submit' className='btn dark-btn w-32 py-2 px-4 rounded-md  '>Submit now<img src="" alt="" /></button>

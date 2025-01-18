@@ -19,10 +19,12 @@ const Contact = () => {
             I'm always open to exciting opportunities and collaborations! Whether it's for a project, job inquiry, or just to say hello, feel free to reach out. You can contact me via email mention below or connect with me directly calling on my moble or whatsapp me.
           </p>
           <div className='flex flex-col gap-4'>
-            <p className='flex items-center gap-2'><div className='text-3xl text-[#01a2e6]'>
-              <IoMdMail />
-            </div> : kesavyadav992@gmail.com</p>
-            <p className='flex items-center gap-2'><div className='text-3xl text-[#01a2e6]'><MdAddCall /> </div>: 7508794201</p>
+            <p className='flex items-center gap-2'>
+              <div className='text-3xl text-[#01a2e6]'>
+                <IoMdMail />
+              </div> : <a href="mailto:kesavyadav992@gmail.com">kesavyadav992@gmail.com</a></p>
+            <p className='flex items-center gap-2'><div className='text-3xl text-[#01a2e6]'><MdAddCall /> </div>: 
+            <a href="callto:7508794201">7508794201</a></p>
           </div>
         </div>
         <div className='flex-1 w-full'>

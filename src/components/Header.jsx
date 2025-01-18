@@ -36,7 +36,7 @@ const Header = ({ theme, setTheme }) => {
           duration={500}
           className='hover:text-[#01a2e6] transition-all duration-200 cursor-pointer active:text-[#01a2e6]'
         >
-          <h2>KeSHaV<span className='text-[#01a2e6] font-bold text-3xl z-50'>.</span></h2>
+          <h2>KESHAV<span className='text-[#01a2e6] font-bold text-3xl z-50'>.</span></h2>
         </ScrollLink>
 
         {/* Theme Toggle */}

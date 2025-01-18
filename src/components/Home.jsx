@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '../components/ui/button';
-import myImage from '../assets/keshav.png';
+import myImage from '../assets/image.png';
 import whiteImage from '../assets/keshavWhite.png';
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa6";
 import { Link, useNavigate } from 'react-router-dom';
@@ -86,7 +86,7 @@ const Home = ({ theme }) => {
       </div>
       <div className="md:w-[40%] w-full hidden md:block">
         <img
-          src={theme === "dark" ? myImage : whiteImage}
+          src={theme === "dark" ? myImage : myImage}
           alt="Keshav Kumar Yadav"
           className='bg-opacity-0 absolute md:relative z-30 h-1/3 rounded-b-full w-full md:scale-150 lg:scale-125'
         />
