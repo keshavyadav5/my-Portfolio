@@ -7,7 +7,7 @@ import myCv from '../assets/keshavKumarYadav.pdf';
 
 const About = () => {
   return (
-    <div className='my-32 text-black dark:text-white w-full flex items-center' id='about'>
+    <div className='my-32 text-black dark:text-white w-full flex flex-col' id='about'>
       <div className='flex flex-col gap-2'>
         <h1 className='text-4xl md:text-6xl font-bold'>
           ab<span className='text-[#01a2e6] underline'>O</span>ut
@@ -15,7 +15,7 @@ const About = () => {
         <div className='flex rounded-md p-2 flex-col dark:rounded-none dark:p-0 md:flex-row gap-2 mt-2 shadow-2xl py-2 items-center justify-center h-full '>
           <div className='flex-1'>
             <div className='text-xs md:text-sm'>
-              I am a web developer pursuing a Bachelor's in Computer Science at Lovely Professional University (2022-2026). Skilled in HTML, CSS, JavaScript, React.js, and Node.js, I enjoy building responsive, user-friendly websites. With a focus on learning and growth, I strive to deliver clean code and effective solutions while working in collaborative environments.
+              I am a web developer currently pursuing a Bachelor's in Computer Science at Lovely Professional University (2022–2026), with a strong foundation in HTML, CSS, JavaScript, React.js, and Node.js. As a Frontend Developer Intern at Enliven Technologies Pvt. Ltd. since November 2024, I’ve built interactive charts and dashboards by integrating APIs for dynamic data visualization. I’ve also managed application state using modern state management libraries, collaborated closely with design and development teams to implement intuitive UI/UX, and maintained clean, version-controlled code for efficient teamwork. I’m passionate about creating responsive, user-friendly web solutions and constantly strive to grow as a developer through hands-on experience and continuous learning.
             </div>
             <div className='btn-cont'>
               <a href={myCv} download="KeshavYadav_CV.pdf">

@@ -60,7 +60,7 @@ const Home = ({ theme }) => {
         <div className='flex flex-col gap-5'>
           <h1 className='text-3xl md:text-4xl font-bold'>Hi, I'm Keshav Kumar Yadav</h1>
           <h2 className='text-2xl font-bold text-[#01a2e6]'>  _{displayText}</h2>
-          <p className='text-sm md:text-lg font-serif'>Committed and goal-oriented Computer Science student at Lovely Professional University, seeking a Software Engineering position. Proficient in HTML, CSS, JavaScript, React.js, Node.js, Express, and MongoDB. Demonstrated ability to learn quickly and excel in fast-paced, team-oriented environments.</p>
+          <p className='text-sm md:text-lg font-serif'>Committed and goal-oriented Computer Science student at Lovely Professional University, seeking a Software Engineering position. Proficient in HTML, CSS, JavaScript, React.js, Node.js, Express, and MongoDB. Demonstrated ability to learn quickly and excel in fast-paced, team-oriented environments. And working as a Frontend Developer Intern at Enliven Technologies Pvt. Ltd. (Nov 2024 – Present).</p>
         </div>
         <div className='mt-5 flex gap-5 btn-cont items-center'>
           <ScrollLink
