@@ -1,15 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { FaSun, FaMoon } from "react-icons/fa6";
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Header = ({ theme, setTheme }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate()
+  const location = useLocation();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const handleHeading = () => {
+    if (location.pathname.includes('certificate')) {
+      navigate('/')
+    }
+    setMenuOpen(!menuOpen);
+  }
+
+  const homeHandle = () => {
+    setMenuOpen(!menuOpen);
+    navigate('/')
+  }
+  const certificateHandler = () => {
+    setMenuOpen(!menuOpen);
+    navigate('/certificate')
+  }
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
@@ -32,7 +49,11 @@ const Header = ({ theme, setTheme }) => {
     <div className='fixed top-0 left-0 px-[5%] md:px-[10%] w-full shadow-xl py-2 dark:bg-[#081b29] bg-[#eaedef] z-50 flex justify-between items-center'>
       <div className="flex-1 text-2xl font-bold italic text-black dark:text-white flex gap-5 items-center">
         <ScrollLink
-          onClick={() => navigate('/')}
+          onClick={homeHandle}
+          to="home"
+          smooth={true}
+          offset={0}
+          duration={500}
           className='hover:text-[#01a2e6] transition-all duration-200 cursor-pointer active:text-[#01a2e6]'
         >
           <h2>KESHAV<span className='text-[#01a2e6] font-bold text-3xl z-50'>.</span></h2>
@@ -60,12 +81,17 @@ const Header = ({ theme, setTheme }) => {
         className={`absolute top-12 left-0 w-full py-3 rounded-b-xl dark:bg-[#0a1c2a] text-black dark:text-white flex flex-col items-center gap-3 transition-all duration-300  ease-in-out transform ${menuOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'} md:relative md:top-0 md:flex-row md:w-auto md:translate-x-0 md:opacity-100 md:bg-transparent md:gap-8 bg-slate-50 rounded-t-none`}
       >
         <ScrollLink
-          onClick={() => navigate('/')}
+          onClick={homeHandle}
+          to="home"
+          smooth={true}
+          offset={0}
+          duration={500}
           className={`hover:text-[#01a2e6] transition-all duration-200 cursor-pointer active:text-[#01a2e6] ${menuOpen ? 'block' : 'hidden'} md:block`}
         >
           Home
         </ScrollLink>
         <ScrollLink
+          onClick={handleHeading}
           to="about"
           smooth={true}
           offset={-55}
@@ -75,6 +101,7 @@ const Header = ({ theme, setTheme }) => {
           About
         </ScrollLink>
         <ScrollLink
+          onClick={handleHeading}
           to="services"
           smooth={true}
           offset={0}
@@ -84,6 +111,7 @@ const Header = ({ theme, setTheme }) => {
           Services
         </ScrollLink>
         <ScrollLink
+          onClick={handleHeading}
           to="projects"
           smooth={true}
           offset={-65}
@@ -93,12 +121,13 @@ const Header = ({ theme, setTheme }) => {
           Projects
         </ScrollLink>
         <ScrollLink
-          onClick={() => navigate('/certificate')}
+          onClick={certificateHandler}
           className={`hover:text-[#01a2e6] transition-all duration-200 cursor-pointer active:text-[#01a2e6] ${menuOpen ? 'block' : 'hidden'} md:block`}
         >
           Certificates
         </ScrollLink>
         <ScrollLink
+          onClick={handleHeading}
           to="contact"
           smooth={true}
           offset={0}
