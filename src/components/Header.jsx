@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { FaSun, FaMoon } from "react-icons/fa6";
+import { useNavigate } from 'react-router-dom';
 
 const Header = ({ theme, setTheme }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate()
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -30,10 +32,7 @@ const Header = ({ theme, setTheme }) => {
     <div className='fixed top-0 left-0 px-[5%] md:px-[10%] w-full shadow-xl py-2 dark:bg-[#081b29] bg-[#eaedef] z-50 flex justify-between items-center'>
       <div className="flex-1 text-2xl font-bold italic text-black dark:text-white flex gap-5 items-center">
         <ScrollLink
-          to="home"
-          smooth={true}
-          offset={-65}
-          duration={500}
+          onClick={() => navigate('/')}
           className='hover:text-[#01a2e6] transition-all duration-200 cursor-pointer active:text-[#01a2e6]'
         >
           <h2>KESHAV<span className='text-[#01a2e6] font-bold text-3xl z-50'>.</span></h2>
@@ -61,10 +60,7 @@ const Header = ({ theme, setTheme }) => {
         className={`absolute top-12 left-0 w-full py-3 rounded-b-xl dark:bg-[#0a1c2a] text-black dark:text-white flex flex-col items-center gap-3 transition-all duration-300  ease-in-out transform ${menuOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'} md:relative md:top-0 md:flex-row md:w-auto md:translate-x-0 md:opacity-100 md:bg-transparent md:gap-8 bg-slate-50 rounded-t-none`}
       >
         <ScrollLink
-          to="home"
-          smooth={true}
-          offset={-65}
-          duration={500}
+          onClick={() => navigate('/')}
           className={`hover:text-[#01a2e6] transition-all duration-200 cursor-pointer active:text-[#01a2e6] ${menuOpen ? 'block' : 'hidden'} md:block`}
         >
           Home
@@ -95,6 +91,12 @@ const Header = ({ theme, setTheme }) => {
           className={`hover:text-[#01a2e6] transition-all duration-200 cursor-pointer active:text-[#01a2e6] ${menuOpen ? 'block' : 'hidden'} md:block`}
         >
           Projects
+        </ScrollLink>
+        <ScrollLink
+          onClick={() => navigate('/certificate')}
+          className={`hover:text-[#01a2e6] transition-all duration-200 cursor-pointer active:text-[#01a2e6] ${menuOpen ? 'block' : 'hidden'} md:block`}
+        >
+          Certificates
         </ScrollLink>
         <ScrollLink
           to="contact"
