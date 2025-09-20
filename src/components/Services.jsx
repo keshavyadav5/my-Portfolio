@@ -1,71 +1,255 @@
-import { Button } from "react-bootstrap";
-import frontend from '../assets/frontend.png';
-import backend from '../assets/backend.png';
-import fullstack from '../assets/fullstack.png';
-import { useState } from "react";
-import Card from "./Card";
+"use client";
+import { Briefcase, Calendar, MapPin } from "lucide-react";
+import { motion } from "framer-motion";
+import CertificationsSection from "./CertificationsSection";
 
-const data = [
+const experiences = [
   {
-    id: 323,
-    name: "Frontend",
-    image: frontend,
-    description: "Frontend is the part of the website that users interact with. I focus on crafting responsive, user-friendly interfaces using HTML, CSS, JavaScript, and React.js. I’ve worked on dynamic, visually appealing websites optimized for performance and accessibility. ",
-    project : {
-      name : "Basket Ball",
-      describtion: "I have created for the frontend project which user-friendly interface using react.js and it is mobile responsive too.",
-      link : 'https://github.com/keshavyadav5/Basketball-React'
-    }
+    id: 1,
+    title: "Frontend Developer Intern",
+    company: "Enliven Technologies Pvt. Ltd",
+    location: "Remote",
+    duration: "Nov 2024 - May 2025",
+    type: "Internship",
+    description:
+      "Working on building interactive charts and dashboards by integrating APIs, managing application state with state management libraries, and collaborating with teams to implement UI/UX designs.",
+    responsibilities: [
+      "Built interactive charts and dashboards by integrating APIs",
+      "Managed application state with state management libraries",
+      "Collaborated with teams to implement UI/UX designs",
+      "Maintained code integrity using version control systems",
+      "Optimized application performance and user experience",
+      "Participated in code reviews and team meetings",
+    ],
+    technologies: [
+      "React.js",
+      "JavaScript",
+      "API Integration",
+      "State Management",
+      "Git",
+    ],
+    current: true,
+  },
+];
+
+const timeline = [
+  {
+    year: "2024",
+    title: "Started Frontend Development Internship",
+    description: "Joined Enliven Technologies as a Frontend Developer Intern",
+    type: "work",
   },
   {
-    id: 324,
-    name: "Backend",
-    image: backend,
-    description: " I specialize in developing secure, scalable backend solutions using Node.js, Express, and MongoDB. My experience includes building RESTful APIs, handling authentication, and ensuring data security.",
-    project : {
-      name : "User Authentication",
-      describtion: "It is secure user login and registration with JWT token-based authentication and bcrypt for password hashing with CRUD operation.",
-      link : 'https://github.com/keshavyadav5/auth_mern'
-    }
+    year: "2023",
+    title: "Advanced MERN Stack Development",
+    description: "Built multiple full-stack applications and earned certifications",
+    type: "education",
   },
   {
-    id: 325,
-    name: "Full Stack",
-    image: fullstack,
-    description: "Combining my frontend and backend expertise, I deliver complete, fullstack web applications. I ensure smooth integration between the frontend UI and backend data handling. ",
-    project : {
-      name : "Note App",
-      describtion: "The application is built with the MERN stack and offers seamless user authentication with JWT tokens and session management through cookies.",
-      link : 'https://github.com/keshavyadav5/Note-app'
-    }
-  }
-]
+    year: "2022",
+    title: "Started Computer Science Journey",
+    description: "Began BTech in Computer Science at Lovely Professional University",
+    type: "education",
+  },
+  {
+    year: "2022",
+    title: "First Web Development Project",
+    description: "Created my first web application using HTML, CSS, and JavaScript",
+    type: "project",
+  },
+];
 
 const Services = () => {
-  const [show, setShow] = useState(true);
-
-  const handleChange = () =>{
-    setShow(!show);
-  }
-
   return (
-    <div className="w-full text-black dark:text-white py-36" id="services">
-      <h1 className="text-4xl md:text-6xl font-bold mb-10">
-        ser<span className="text-[#01a2e6] underline">V</span>ices
-      </h1>
-      <div className="w-full flex-1 grid gird-cols-1 md:grid-cols-2 lg:flex lg:justify-between gap-4">
+    <section id="services" className="py-20 dark:bg-transparent transition-all duration-300 inset-0 bg-gradient-to-br from-primary/20 via-secondary/10 md:to-accent/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {
-          data.map((service) => (
-            <Card service={service} key={service.id} />
-          ))
-        }
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
+            Professional{" "}
+            <span className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
+              Experience
+            </span>
+          </h2>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto text-gray-600 dark:text-gray-400">
+            My journey in the tech industry and key milestones
+          </p>
+        </motion.div>
 
+        {/* Experience Cards */}
+        <div className="mb-16">
+          {experiences.map((experience, index) => {
+            return (
+              <motion.div
+                key={experience.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className="p-8 rounded-2xl backdrop-blur-sm border bg-white/50 border-gray-200/50 dark:bg-slate-800/50 dark:border-slate-700/50"
+              >
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-500/20">
+                        <Briefcase className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                      </div>
+                      <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
+                        {experience.title}
+                      </h3>
+                      {/* {experience.current && (
+                        <span className="px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-medium rounded-full">
+                          Current
+                        </span>
+                      )} */}
+                    </div>
 
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
+                      <h4 className="text-lg font-semibold text-blue-600 dark:text-blue-400">
+                        {experience.company}
+                      </h4>
+                      <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                        <div className="flex items-center gap-1">
+                          <MapPin size={16} />
+                          {experience.location}
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Calendar size={16} />
+                          {experience.duration}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
+                  <span className="px-3 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-600 dark:bg-purple-500/20 dark:text-purple-400">
+                    {experience.type}
+                  </span>
+                </div>
+
+                <p className="text-lg mb-6 leading-relaxed text-gray-600 dark:text-gray-300">
+                  {experience.description}
+                </p>
+
+                {/* Responsibilities */}
+                <div className="mb-6">
+                  <h5 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
+                    Key Responsibilities:
+                  </h5>
+                  <ul className="grid md:grid-cols-2 gap-2">
+                    {experience.responsibilities.map((responsibility, respIndex) => (
+                      <motion.li
+                        key={respIndex}
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.4, delay: respIndex * 0.1 }}
+                        viewport={{ once: true }}
+                        className="flex items-start gap-3 text-gray-600 dark:text-gray-300"
+                      >
+                        <div className="w-2 h-2 rounded-full mt-2 flex-shrink-0 bg-blue-500 dark:bg-blue-400" />
+                        <span>{responsibility}</span>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Technologies */}
+                <div>
+                  <h5 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
+                    Technologies Used:
+                  </h5>
+                  <div className="flex flex-wrap gap-2">
+                    {experience.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 rounded-full text-sm font-medium bg-gray-200/50 text-gray-700 dark:bg-slate-700/50 dark:text-gray-300"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Timeline */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">
+            Career Timeline
+          </h3>
+
+          <div className="relative">
+            {/* Line */}
+            <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-gray-300 dark:bg-slate-700" />
+
+            {timeline.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className={`relative flex items-center mb-8 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                  }`}
+              >
+                {/* Dot */}
+                <div
+                  className={`absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 rounded-full border-4 ${item.type === "work"
+                    ? "bg-blue-500 border-white dark:border-slate-900"
+                    : item.type === "education"
+                      ? "bg-green-500 border-white dark:border-slate-900"
+                      : "bg-purple-500 border-white dark:border-slate-900"
+                    }`}
+                />
+
+                {/* Content */}
+                <div
+                  className={`ml-12 md:ml-0 md:w-5/12 ${index % 2 === 0
+                    ? "md:mr-auto md:pr-8"
+                    : "md:ml-auto md:pl-8"
+                    }`}
+                >
+                  <div className="p-6 rounded-xl backdrop-blur-sm border bg-white/50 border-gray-200/50 dark:bg-slate-800/50 dark:border-slate-700/50">
+                    <div
+                      className={`text-sm font-medium mb-2 ${item.type === "work"
+                        ? "text-blue-600 dark:text-blue-400"
+                        : item.type === "education"
+                          ? "text-green-600 dark:text-green-400"
+                          : "text-purple-600 dark:text-purple-400"
+                        }`}
+                    >
+                      {item.year}
+                    </div>
+                    <h4 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">
+                      {item.title}
+                    </h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        <CertificationsSection />
       </div>
-    </div>
+    </section>
   );
-};
+}
 
 export default Services;

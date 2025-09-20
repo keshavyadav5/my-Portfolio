@@ -8,7 +8,6 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import { ThemeProvider } from './Theme_provider';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Certificate from './components/Certificate';
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -39,7 +38,7 @@ const App = () => {
   }, [theme]);
 
   return (
-    <div className="container min-w-full min-h-screen px-[5%] sm:px-[10%] text-white dark:bg-[#081b29]">
+    <div className="container min-w-full min-h-screen text-white dark:bg-[#081b29]">
       <ThemeProvider defaultTheme={theme} storageKey="vite-ui-theme">
         <Header theme={theme} setTheme={setTheme} />
         <Routes>
@@ -51,7 +50,6 @@ const App = () => {
             <Contact />
             <Footer />
           </>} />
-          <Route path='/certificate' element={<Certificate />} />
         </Routes>
       </ThemeProvider>
     </div>
