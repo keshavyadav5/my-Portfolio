@@ -67,8 +67,8 @@ const Projects = () => {
                 key={index}
                 className="bg-white/10 dark:bg-gray-800/40 backdrop-blur-md border border-gray-200/20 dark:border-gray-700/30 rounded-xl overflow-hidden shadow-md"
                 data-testid={`project-card-${index}`}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >

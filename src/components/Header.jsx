@@ -70,13 +70,6 @@ const Header = ({ theme, setTheme }) => {
       </div>
 
       <div className='flex items-center gap-3'>
-        <button
-          onClick={toggleMenu}
-          className="block md:hidden px-2 py-1 text-xl text-black dark:text-white font-bold dark:font-normal menu-toggle transition-all duration-300"
-          aria-expanded={menuOpen}
-        >
-          ☰
-        </button>
         <div className='pr-2 md:hidden'>
           {theme === 'light' ? (
             <FaSun className='text-xl ml-2 cursor-pointer text-gray-500' onClick={toggleTheme} />
@@ -84,6 +77,13 @@ const Header = ({ theme, setTheme }) => {
             <FaMoon className='text-xl ml-2 cursor-pointer' onClick={toggleTheme} />
           )}
         </div>
+        <button
+          onClick={toggleMenu}
+          className="block md:hidden px-2 py-1 text-xl text-black dark:text-white font-bold dark:font-normal menu-toggle transition-all duration-300"
+          aria-expanded={menuOpen}
+        >
+          ☰
+        </button>
       </div>
 
 

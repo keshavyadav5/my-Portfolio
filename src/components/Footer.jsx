@@ -9,13 +9,13 @@ export default function Footer() {
     <footer className="bg-muted/50 border-t border-border transition-all duration-300 dark:bg-[#081b29] bg-[#eaedef]">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="mb-4 md:mb-0 text-center py-6">
+          <div className="mb- md:mb-0 text-center py-6">
             <p className="text-muted-foreground">
               &copy; 2025 {PERSONAL_INFO.name}. All rights reserved.
             </p>
           </div>
           
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-6 mb-1 md:mb-0">
             <a 
               href={PERSONAL_INFO.linkedin}
               target="_blank"
