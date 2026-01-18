@@ -9,7 +9,7 @@ export const PERSONAL_INFO = {
   portfolio: "https://keshavyadavportfolio.netlify.app",
   instagram: 'https://instagram.com/k_shav09',
   tagline: "Building scalable web applications with MERN stack expertise",
-  bio: "Computer Science student at Lovely Professional University with expertise in MERN stack and Django. Experienced in building responsive web apps, REST APIs, and authentication systems. Strong problem-solving abilities with internship experience in frontend development and API integration."
+  bio: "Computer Science student at Lovely Professional University specializing in full-stack development with MERN stack and Django. Experienced in building responsive web applications, real-time features, RESTful APIs, and authentication systems. Proficient in AWS & Kubernetes, with strong problem-solving capabilities and practical internship experience in frontend development and API integration."
 };
 
 export const EDUCATION = {
@@ -25,30 +25,35 @@ export const TECHNICAL_SKILLS = {
   frontend: ["HTML", "CSS", "React.js", "Next.js", "Tailwind CSS"],
   backend: ["Node.js", "Express.js", "Django"],
   databases: ["MongoDB", "MySQL"],
-  tools: ["Git", "VS Code", "IntelliJ"]
+  tools: ["Git", "VS Code", "IntelliJ"],
+  Cloud_DevOps: ["AWS (EC2, S3, Lambda)", "Kubernetes", "Docker"],
+  Real_Time: "Socket.IO"
 };
 
 export const PROJECTS = [
   {
-    name: "xStore – Full-Stack E-Commerce Platform",
-    techStack: ['React', 'Node.js', 'MongoDB', 'Express', 'JWT', 'Tailwind CSS', 'Cloudinary'],
-    description: "Built a full-stack e-commerce app using MERN stack with complete product, user, and order management system.",
+    name: "Grocery-Delivery – Full-Stack Grocery Delivery Platform",
+    techStack: ["Next.js", "React", "Node.js", "Express", "MongoDB", "Socket.IO", "JWT", "Tailwind CSS"],
+    description:
+      "Built a full-stack grocery delivery web application using MERN stack with Next.js and real-time updates for order/cart flow.",
     features: [
-      "REST APIs for product, user, and order management",
-      "Responsive React UI with product listing, cart, and checkout",
-      "Optimized MongoDB schemas for scalable data operations",
-      "JWT authentication, validation, and error handling",
-      "State management with Context API/Redux"
+      "REST APIs for user, product, and order management",
+      "Responsive UI with Next.js + Tailwind CSS for smooth user experience",
+      "Real-time updates using Socket.IO for live order/cart interactions",
+      "JWT authentication with secure access control and validation",
+      "Optimized MongoDB queries and schema design for scalable data handling"
     ],
-    githubLink: 'https://github.com/keshavyadav5/xstore',
-    liveDemo: 'https://github.com/keshavyadav5/xstore',
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+    githubLink: "https://github.com/keshavyadav5/grocery-delivery",
+    liveDemo: "https://snap-cart-teal.vercel.app",
+    image:
+      "https://res.cloudinary.com/dlecrzota/image/upload/v1768757456/k7jzdscypdqk853gbyi3.png",
     gradient: "from-primary/20 to-secondary/20"
   },
   {
     name: "My Blog – MERN Blogging Platform",
-    techStack: ['React', 'Node.js', 'MongoDB', 'Express', 'Rich Text Editor', 'Context API'],
-    description: "Built a comprehensive blogging platform with user authentication and rich text editing capabilities.",
+    techStack: ["React", "Node.js", "MongoDB", "Express", "Rich Text Editor", "Context API"],
+    description:
+      "Built a comprehensive blogging platform with user authentication and rich text editing capabilities.",
     features: [
       "User authentication and authorization for secure access",
       "RESTful APIs for seamless communication",
@@ -56,8 +61,8 @@ export const PROJECTS = [
       "Optimized MongoDB queries for improved performance",
       "State management with Context API/Redux"
     ],
-    githubLink: 'http://github.com/keshavyadav5/my-Blog',
-    liveDemo: 'https://keshavblog.netlify.app/',
+    githubLink: "http://github.com/keshavyadav5/my-Blog",
+    liveDemo: "https://keshavblog.netlify.app/",
     image: "https://res.cloudinary.com/dlecrzota/image/upload/v1754036527/djspd76ryz55tfwxvgon",
     gradient: "from-secondary/20 to-accent/20"
   }
@@ -97,7 +102,7 @@ export const CERTIFICATIONS = [
 
 export const TYPING_TEXTS = [
   'Full Stack Developer',
-  'MERN Stack Enthusiast', 
+  'MERN Stack Enthusiast',
   'Problem Solver',
   'CS Student'
 ];
